@@ -1,0 +1,8 @@
+Nazwa systemu operacyjnego: 
+- Windows 11 Pro
+Nazwy środowisk programistycznych: 
+- Visual Studio 2022
+- Visual Studio Code
+Nazwy języków propramowania:
+- C#
+- React

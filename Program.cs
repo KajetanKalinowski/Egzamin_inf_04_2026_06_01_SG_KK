@@ -1,5 +1,9 @@
 using System.Diagnostics;
-
+// nazwa funkcji: Main 
+// opis funkcji: główna funkcja wykonująca program
+// parametry: brak
+// zwracany typ i opis: zapętlone 5 losowo wygenerowanych haseł 
+// autor: 12345678901
 static void Main(string[] args)
 {
     Console.WriteLine("Aplikacja losująca hasło");
