@@ -5,4 +5,4 @@ Nazwy środowisk programistycznych:
 - Visual Studio Code
 Nazwy języków propramowania:
 - C#
-- React
+- JavaScript

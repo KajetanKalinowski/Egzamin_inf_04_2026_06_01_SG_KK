@@ -16,25 +16,25 @@ function App() {
     <div>
       <h1 style={{display:"flex",justifySelf:"center"}}>Menedżer haseł - wykonał 00000000000</h1>
       <Form style={{marginInline:"200px"}}>
-        <FormGroup style={{marginTop:"10px"}}>
-        <FormLabel>Adres WWW:</FormLabel>
-        <FormControl type='text' placeholder='Adres strony WWW' onChange={(e)=>{setAdres(e.target.value);setZapisane(false)}}/>
+        <FormGroup style={{marginTop:"10px"}} controlId="adres">
+        <FormLabel htmlFor="adres">Adres WWW:</FormLabel>
+        <FormControl id="adres" type='text' placeholder='Adres strony WWW' onChange={(e)=>{setAdres(e.target.value);setZapisane(false)}}/>
         </FormGroup>
-        <FormGroup style={{marginTop:"10px"}}>
-        <FormLabel>Login:</FormLabel>
-        <FormControl type='text' placeholder='Twój login' onChange={(e)=>{setLogin(e.target.value);setZapisane(false)}}/>
+        <FormGroup style={{marginTop:"10px"}} controlId="login">
+        <FormLabel htmlFor="login">Login:</FormLabel>
+        <FormControl id="login" type='text' placeholder='Twój login' onChange={(e)=>{setLogin(e.target.value);setZapisane(false)}}/>
         </FormGroup>
-        <FormGroup style={{marginTop:"10px"}}>
+        <FormGroup style={{marginTop:"10px"}} controlId="haslo">
         <FormLabel style={{display:"flex",flexDirection:"row",gap:"4px"}}><FormCheck type='checkbox' defaultChecked={check} onChange={(e)=>{setCheck(e.target.checked);setZapisane(false)}}/>Wygeneruj hasło</FormLabel>
-        <FormLabel>Hasło:</FormLabel>
-        <FormControl type='password' disabled={check} onChange={(e)=>{setHaslo(e.target.value);setZapisane(false)}}/>
+        <FormLabel htmlFor="haslo">Hasło:</FormLabel>
+        <FormControl id="haslo" type='password' disabled={check} onChange={(e)=>{setHaslo(e.target.value);setZapisane(false)}}/>
         </FormGroup>
       </Form>
-      <Button style={{marginLeft:"180px",marginTop:"10px"}} onClick={()=>{setZapisane(true)}}>Zapisz</Button>
+      <Button style={{marginLeft:"180px",marginTop:"10px"}} className='variant' onClick={()=>{setZapisane(true)}}>Zapisz</Button>
     {zapisane?<div>
-      <p style={{color:"blue",padding:"0.5rem"}}>Adres: {adres}</p>
-      <p style={{padding:"0.5rem"}}>Login: {login}</p>
-      <p style={{padding:"0.5rem"}}>Hasło: {check?"Hasło automatycznie generowane":haslo}</p>
+      <p style={{color:"blue",padding:"0.5rem"}} className="lead text-primary">Adres: {adres}</p>
+      <p style={{padding:"0.5rem"}} className="lead text-primary">Login: {login}</p>
+      <p style={{padding:"0.5rem"}} className="lead text-primary">Hasło: {check?"Hasło automatycznie generowane":haslo}</p>
     </div>:<></>}
 
     </div>
